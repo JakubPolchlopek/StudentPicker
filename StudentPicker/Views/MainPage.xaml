@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:StudentPicker"
+             x:Class="StudentPicker.Views.MainPage"
+             Title="🎓 System Losowania">
+    <ContentPage.Resources>
+        <StyleSheet Source="/Resources/Styles/style.css" />
+    </ContentPage.Resources>
+
+    <VerticalStackLayout Spacing="25" Padding="30">
+
+        <Label x:Name="LuckyLabel"/>
+
+        <Picker x:Name="ClassPicker" Title="Wybierz klasę" TextColor="Black" />
+
+
+        <Button Text="Wczytaj klasę" x:Name="loadBtn"  Clicked="LoadListClicked" />
+        <Button Text="Wylosuj osobę" Clicked="PickStudentClicked" />
+        <Button Text="Dodaj klasę" Clicked="OnAddClass" />
+        <Button Text="Edytuj klasę" Clicked="OnEditClass" />
+
+
+
+        <Label x:Name="ResultLabel" FontSize="18" HorizontalOptions="Center" />
+
+        <CollectionView x:Name="StudentList">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Padding="5" Margin="5">
+                        <VerticalStackLayout x:Name="StudentLayout">
+                            <Label Text="{Binding Name}" FontSize="18" />
+
+                            <Label Text="{Binding ClassNumber}" FontSize="16" />
+                        </VerticalStackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        
+        
+    </VerticalStackLayout>
+
+</ContentPage>

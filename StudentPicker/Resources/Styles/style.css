@@ -1,0 +1,58 @@
+button {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 18;
+    border-radius: 12;
+    padding: 10;
+    margin-top: 5;
+}
+
+label {
+    color: #333;
+    font-size: 16;
+}
+
+    label#ResultLabel {
+        color: #81D4FA;
+        font-weight: bold;
+        font-size: 20;
+        text-align: center;
+    }
+
+    label#LuckyLabel {
+        font-size: 24;
+        font-weight: bold;
+        color: deeppink;
+    }
+
+picker {
+    background-color: #f0f8ff;
+    font-size: 16;
+    border-radius: 8;
+    padding: 8;
+}
+
+frame {
+    background-color: #d3d3d3;
+    border-color: #ddd;
+    border-width: 1;
+    corner-radius: 10;
+    shadow-color: #000000;
+    shadow-opacity: 0.1;
+    shadow-offset: 0,2;
+}
+
+collectionview {
+    margin-top: 10;
+}
+
+VerticalStackLayout#StudentLayout {
+    padding: 10;
+    background-color: #f5f5f5;
+    border-radius: 8;
+}
+
+button.smaller {
+    font-size: 14;
+    padding: 8;
+}

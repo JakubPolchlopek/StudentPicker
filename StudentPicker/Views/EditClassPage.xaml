@@ -1,0 +1,25 @@
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="StudentPicker.Views.EditClassPage"
+    Title="Edytuj klasę">
+
+    <StackLayout Padding="20">
+        <Label Text="Uczniowie klasy:" FontSize="20" HorizontalOptions="Center" />
+
+        <CollectionView x:Name="StudentListView">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Orientation="Horizontal" Margin="5">
+                        <Label Text="{Binding Name}" VerticalOptions="Center" />
+                        <Button Text="Usuń" Clicked="OnDeleteStudent" CommandParameter="{Binding .}" />
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Entry x:Name="NewStudentEntry" Placeholder="Dodaj ucznia" />
+        <Button Text="Dodaj ucznia" Clicked="OnAddStudent" />
+        <Button Text="Zapisz zmiany" Clicked="OnSave" />
+    </StackLayout>
+</ContentPage>
